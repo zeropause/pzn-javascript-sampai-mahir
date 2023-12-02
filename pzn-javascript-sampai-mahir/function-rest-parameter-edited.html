@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>REST Parameter</title>
+</head>
+
+<body>
+    <script>
+
+        const firstName = prompt(`Siapa namamu?`);
+        let nameCheck = firstName;
+
+        function sum(name, ...data) {
+            if (nameCheck === null) {
+                document.writeln(`Masukkan namamu`);
+                return;
+            }
+            let total = 0;
+            for (const item of data) {
+                total += item;
+            }
+            document.writeln(`<p> Hallo ${firstName}, Total untuk ${name} adalah ${total}</p>`);
+        }
+
+        sum("Orange", 2, 5, 10, 25, 30, 45, 60);
+        sum("Banana", 5, 23, 65, 34, 22);
+    </script>
+</body>
+
+</html>

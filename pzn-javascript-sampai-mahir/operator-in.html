@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Operator In</title>
+</head>
+
+<body>
+    <script>
+
+        const person = {
+            firstName: "Budi",
+            lastName: "Setiawan"
+        };
+
+        if ("firstName" in person) {
+            alert(`Hello ${person.firstName}`);
+        } else {
+            alert(`Hello`);
+        }
+        // operator in untuk melakukan pengecekan sebuah properti ada didalam sebuah object atau tidak
+
+        const student = {
+            firstName: "Nabil",
+            middleName: undefined,
+            lastName: "Prasetyo"
+        };
+
+        if ("middleName" in student) {
+            alert(`Hello ${student.middleName}`);
+        } else {
+            alert("Hello Student");
+        }
+
+        // walaupun value property undefined atau null, akan tetap dianggap ada
+
+        const names = [null, "Kurniawan", null];
+
+        const result = 0 in names;
+
+        document.writeln(`<p>Hasil dari array adalah : ${result}</p>`);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Scope</title>
+</head>
+
+<body>
+  <script>
+
+    // global scope
+    let counter = 0;
+
+    // global scope function hitMe
+    function hitMe() {
+      // local scope dalam hitMe
+      counter++
+    }
+
+    function other() {
+      // local scope dalam other
+    }
+
+    hitMe();
+    hitMe();
+
+    console.info(counter);
+
+    // local scope hanya bisa digunakan di dalam local scope (atau dalam function). 
+
+    function first() {
+      // local scope first
+      let firstVariable = "First";
+
+      // global scope firstNested inside the local scope first
+      function firstNested() {
+        // local scope firstNested
+        console.info(firstVariable);
+        const firstNestedVariable = "First Nested";
+      }
+      firstNested();
+      console.info(firstNestedVariable); // error
+    }
+
+    first();
+  </script>
+</body>
+
+</html>

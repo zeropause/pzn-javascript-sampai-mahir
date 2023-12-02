@@ -1,0 +1,7 @@
+Materi penting dalam Pembelajaran Javascript
+
+
+- REST Parameter
+- Parameter Function
+- Anonymous Function (optional)
+- 

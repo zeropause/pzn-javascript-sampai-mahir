@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Falsy dan Truthy</title>
+</head>
+
+<body>
+    <script>
+
+        const data = "";
+
+        if (data) {
+            document.writeln("TRUE");
+        } else {
+            document.writeln("FALSE");
+        }
+
+        const truthyFalsy = {
+            "false": "Boolean false",
+            "0, -0": "Number 0 dan -0 dianggap false",
+            "string_kosong": "Semua string kosong dianggap false",
+            null: "null dianggap false",
+            undefined: "undefined dianggap false",
+            NaN: "Not A Number dianggap false"
+        }
+
+        console.table(truthyFalsy);
+    </script>
+</body>
+
+</html>

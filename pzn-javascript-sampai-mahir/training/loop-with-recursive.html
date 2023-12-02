@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Loop with Recursive</title>
+</head>
+
+<body>
+  <script>
+
+    // for loop
+    function forLoop(value) {
+      for (let i = 1; i <= value; i++) {
+        document.writeln(`<p>${i}</p>`)
+      }
+    }
+
+    forLoop(5);
+
+    // recursive loop
+
+    let x = prompt("Loop berapa kali?");
+    let y = 1;
+
+    function recursiveLoop(value) {
+      if (x === null || x === "") {
+        document.writeln("Masukkin nomornya coy");
+        return;
+      }
+      if (value > x) {
+        document.writeln(`<p>Berhasil loop sebanyak ${x} kali</p>`);
+        return;
+      } else {
+        document.writeln(`<p>Pengulangan ke-${value} kali</p>`);
+        recursiveLoop(value + 1);
+      }
+    }
+
+    document.writeln(`<p>${recursiveLoop(y)}</p>`);
+
+
+  </script>
+</body>
+
+</html>

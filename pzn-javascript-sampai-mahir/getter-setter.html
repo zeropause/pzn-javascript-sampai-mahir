@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Getter & Setter</title>
+</head>
+<body>
+  <script>
+    const person = {
+      firstName: "Zalfa",
+      lastName: "Ramadhan",
+      get fullName() {
+        return `${this.firstName} ${this.lastName}`;
+      }
+    }
+    
+    console.info(person.fullName);
+  </script>
+</body>
+</html>

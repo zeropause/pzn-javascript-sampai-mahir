@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Function Sebagai Value</title>
+</head>
+
+<body>
+  <script>
+
+    function sayHello(name) {
+      document.writeln(`<p>Hello ${name}</p>`);
+    }
+
+    sayHello("Ijal");
+
+    const say = sayHello;
+
+    say("Budi"); // Function ini dijadikan value / nilai dari variable say
+
+    // Function di Parameter
+    function giveMeName(callback) {
+      callback("Iki"); // sayHello("Iki")
+    }
+
+    giveMeName(sayHello);
+    giveMeName(say); // giveMeName(sayHello)
+  </script>
+</body>
+
+</html>

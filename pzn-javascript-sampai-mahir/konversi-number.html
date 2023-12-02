@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Konversi Number</title>
+</head>
+
+<body>
+    <script>
+        const value1 = parseInt("1");
+        const value2 = 1;
+        const sum = value1 + value2;
+        const valueFloat = "1.1";
+
+        document.writeln(`<p>${sum}</p>`);
+
+        document.writeln(`<p>${parseInt(valueFloat)}</p>`);
+        document.writeln(`<p>${parseFloat(valueFloat)}</p>`);
+        document.writeln(`<p>${Number(valueFloat)}</p>`);
+
+        const a = 1;
+        const b = 1;
+        const total = a.toString() + b.toString();
+        document.writeln(`<p>${total}</p>`);
+
+        const valueNaN = "champion";
+        const valueNum = "3";
+        document.writeln(`<p>${isNaN(valueNaN)}</p>`);
+        document.writeln(`<p>${isNaN(valueNum)}</p>`);
+
+    </script>
+</body>
+
+</html>

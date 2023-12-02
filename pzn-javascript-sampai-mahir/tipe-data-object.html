@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tipe Data Object</title>
+</head>
+
+<body>
+    <script>
+        const orang = {
+            "nama_lengkap": "Budi Setiawan",
+            // kasus memakai string untuk attributes hanya untuk lebih dari 2 kata
+            alamat: "Indonesia",
+            umur: 30
+
+        };
+
+        // Ubah property / attribute
+        // orang["nama"] = "Zalfa Ramadhan";
+        // orang["alamat"] = "Indonesia";
+        // orang["umur"] = 20;
+
+        console.info(`Nama : ${orang["nama_lengkap"]}`);
+        console.info(`Alamat : ${orang.alamat}`);
+        console.info(`Umur : ${orang.umur}`);
+
+        console.table(orang);
+
+        delete orang["umur"];
+
+        console.table(orang);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Function Generator</title>
+</head>
+
+<body>
+  <script>
+    function* createNames() {
+      yield "Zalfa";
+      yield "Dwi";
+      yield "Ramadhan";
+    }
+
+    const names = createNames();
+    for (const name of names) {
+      console.info(name);
+    }
+
+
+    // lazy
+    function* buatGanjil(value) {
+      for (let i = 1; i < value; i++) {
+        if (i % 2 === 1) {
+          console.info(`Nomor ${i} adalah ganjil.`)
+          yield i;
+        }
+      }
+    }
+
+    // eager
+    function buatGanjilArray(value) {
+      let x = [];
+      for (let i = 1; i < value; i++) {
+        if (i % 2 === 1) {
+          console.info(`Nomor ${i} adalah ganjil`);
+          x.push(i);
+        }
+      }
+      return x;
+    }
+
+    let valueGanjil = prompt("Masukkan nomor berapa");
+
+    const ganjil = buatGanjilArray(valueGanjil);
+    for (const odd of ganjil) {
+      console.info(odd);
+    }
+  </script>
+</body>
+
+</html>

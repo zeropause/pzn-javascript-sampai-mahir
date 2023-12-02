@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Function Parameter</title>
+</head>
+
+<body>
+    <script>
+
+        const firstName = prompt("Siapa namamu?");
+        const city = prompt("Tinggal dimana");
+
+        function greetings(firstName, city) {
+            if (!firstName || !city) {
+                document.writeln("Ente kadang-kadang, isi yang lengkap dulu!");
+                return;
+            }
+            document.writeln(`Hallo ${firstName}, kamu tinggal di ${city}`);
+        }
+
+        greetings(firstName, city);
+
+    </script>
+</body>
+
+</html>

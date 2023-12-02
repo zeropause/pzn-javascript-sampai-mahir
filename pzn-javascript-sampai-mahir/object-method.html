@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Object Method</title>
+</head>
+<body>
+  <script>
+
+    // cara pertama (jika object belum dibuat) :
+    // const person = {
+    //   name: "Eko",
+    //   sayHello: function (name) {
+    //     alert(`Hello ${name}`);
+    //   }
+    // };
+
+    // cara kedua (jika object sudah terlanjur dibuat) :
+    const person = {
+      name: "Eko";
+    }
+
+    person.sayHello = function(name) {
+      alert(`Hello ${name}`);
+    }
+
+    person.sayHello("Zalfa");
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>REST Parameter</title>
+</head>
+
+<body>
+    <script>
+
+        function sum(name, ...data) {
+            let total = 0;
+            for (const item of data) {
+                total += item;
+            }
+            document.writeln(`<p>Total ${name} is ${total}</p>`);
+        }
+
+        sum("Orange", 2, 5, 10, 25, 30, 45, 60);
+        sum("Banana", 5, 23, 65, 34, 22, 40, 64);
+
+        const values = [10, 10, 10, 10, 10];
+        sum("Test", ...values); // spread syntax 
+
+        function oldSum() {
+            let total = 0;
+            for (const argument of arguments) {
+                total += argument;
+            }
+            document.writeln(`Your total is ${total}`);
+        }
+
+        oldSum(1, 2, 3, 4, 5);
+
+
+    </script>
+</body>
+
+</html>

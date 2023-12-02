@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Test Case 2</title>
+</head>
+
+<body>
+  <script>
+    function multiply(arr, n) {
+      if (n <= 0) {
+        return 1;
+      } else {
+        return multiply(arr, n - 1) * arr[n - 1];
+      }
+    }
+
+    function sumForLoop(arr, n) {
+      let product = 1;
+      for (let i = 0; i < n; i++) {
+        product *= arr[i];
+      }
+      return product;
+    }
+
+    console.log(multiply([1], 0));
+  </script>
+</body>
+
+</html>
