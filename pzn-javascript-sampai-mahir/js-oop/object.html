@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+        function Person(firstName, lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.sayHello = function (name) {
+                console.log(`Hello ${name}, my name is ${this.firstName}`)
+            }
+        }
+
+        const eko = new Person("Eko", "Kurniawan");
+
+        const budi = new Person("Budi", "Setiawan");
+
+        budi.sayHello("Nabil");
+
+        console.log(eko);
+        console.log(budi);
+
+    </script>
+</body>
+</html>
